@@ -1,65 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="/style.css" rel="stylesheet">
+    <title>Portfolio</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <h1>My Portfolio</h1>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    
-    <section id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Rahul Thakuri, a Graphics Designer.</p>
-    </section>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Description of the project.</p>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello , I'm</h3>
+            <h1>Rahul Thakuri</h1>
+            <h3>and Im a <span>Frontend dev</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia minus nisi sit!</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-reddit'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+
+            </div>
+            <a href="/download/cv.txt" class="btn" download="cv.txt">Download my cv</a>
         </div>
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Description of the project.</p>
+        <div class="home-img"><img src="/download/ss.png" alt="my pic"></div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./download/ss.png" alt="">
         </div>
-        <!-- Add more projects as needed -->
+        <div class="about-content">
+            <h2 class="heading">About Me!</h2>
+            <h3>Front-End Developer</h3>
+            <p>Hello, my name is Rahul Thakuri. I am 20 years old. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bxl-html5'></i>
+                <h3>Web Development</h3>
+                <p>Creating responsive and functional websites.</p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-css3'></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing user-friendly interfaces.</p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-javascript'></i>
+                <h3>JavaScript Development</h3>
+                <p>Building dynamic web applications.</p>
+                <a href="" class="btn">Read more</a>
+            </div>
+        </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+    <section class="Portfolio" id="portfolio">
+        <div class="Portfolio-container">
+            <div class="Portfolio-box">
+                <img src="./download/ai.png" alt="">
+                <div class="Portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#"><i class='bx bx-link-alt'></i></a>
+                </div>
+            </div>
+            <div class="Portfolio-box">
+                <img src="./download/ai.png" alt="">
+                <div class="Portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#"><i class='bx bx-link-alt'></i></a>
+                </div>
+            </div>
+            <div class="Portfolio-box">
+                <img src="./download/ai.png" alt="">
+                <div class="Portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#"><i class='bx bx-link-alt'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
