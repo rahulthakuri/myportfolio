@@ -1,75 +1,255 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: white;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
-#hero {
-    background: url('your-background-image.jpg') no-repeat center center/cover;
+body {
+    background-color: rgb(165, 213, 255);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 1rem 9%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 2rem;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.navbar a:hover {
+    color: blue;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    border-radius: 50%;
+    height: 4rem;
+    background-color: transparent;
+    font-size: 2rem;
+    margin: 2rem 1.5rem 2rem 0;
+}
+
+.social-media a:hover {
+    color: black;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: brown;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 5rem;
+    font-size: medium;
+    letter-spacing: 0.1rem;
+    transition: 0.1 ease;
+}
+
+.btn:hover {
+    background-color: black;
     color: white;
-    padding: 5rem 0;
-    text-align: center;
+    box-shadow: 0 0 1rem black;
+}
+
+.home-img img {
+    width: 20rem;
+    margin-left: 1rem;
 }
 
 section {
-    padding: 2rem;
-    margin: 2rem 0;
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
-#projects .project {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem 0;
-}
-
-#contact-form {
+.about {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    background-color: white;
 }
 
-#contact-form label {
-    margin-top: 1rem;
+.about-img img {
+    width: 30rem;
 }
 
-#contact-form input, #contact-form textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-#contact-form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: #333;
-    color: white;
-    border: none;
-}
-
-footer {
-    background-color: #333;
-    color: white;
+.heading {
     text-align: center;
-    padding: 1rem 0;
+    line-height: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin: 2rem 0 3rem;
+}
+
+.services h2 {
+    margin: 0 0 5rem 0;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-box {
+    /* this means: flex:1 1 20rem; flex: <flex-grow> <flex-shrink> <flex-basis> */
+    flex: 1 1 20rem;
+    background-color: #DC7F9B;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.services-box:hover {
+    border-color: white;
+    background-color: #F8C025;
+    transform: scale(1.1);
+}
+
+.services-box i {
+    font-size: 5rem;
+    color: rgb(165, 213, 255);
+}
+
+.services-box h3 {
+    font-size: 1.6rem;
+}
+
+.services-box p {
+    font-size: 0.9rem;
+    margin: 1rem 0 3rem;
+}
+
+/* portfolio */
+.Portfolio {
+    background-color: burlywood;
+}
+
+.Portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.Portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*we need 3 columns of 1 fraction of space */
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.Portfolio-box {
+    position: relative;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem black;
+    overflow: hidden;
+    display: flex;
+}
+
+.Portfolio-box img{
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.Portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.Portfolio-layer{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1),black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.Portfolio-box:hover .Portfolio-layer{
+    transform: translateY(0);
+}
+
+.Portfolio-layer h4{
+    font-size: 2rem;
+}
+
+.Portfolio-layer p{
+    font-size: 1rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.Portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 50%;
 }
